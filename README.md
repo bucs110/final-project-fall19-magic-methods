@@ -5,7 +5,7 @@
 ### Fall Semester, 2019
 ### [Assignment Description](https://drive.google.com/open?id=1HLIk-539N9KiAAG1224NWpFyEl4RsPVBwtBZ9KbjicE)
 
-<< [https://github.com/<repo>](#) >>
+<< [https://github.com/bucs110/final-project-fall19-magic-methods](#) >>
 
 << [link to demo presentation slides](#) >>
 
@@ -23,7 +23,7 @@ school's campus itself.
 ***    
 
 ## User Interface Design
-* << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. >>
+* ![UI Sketch](assets/UI_Drawing.jpg)
     * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
 * << You should also have a screenshot of each screen for your final GUI >>
 
