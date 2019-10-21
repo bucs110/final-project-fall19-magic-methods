@@ -25,6 +25,9 @@ school's campus itself.
 ## User Interface Design
 * ![UI Sketch](assets/UI_Drawing.jpg)
     * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
+     *Start Screen - game title, character customization, and play button
+     *Game Screen - character and game setting
+     *End Screen - includes option to play again, end, and displays highscores
 * << You should also have a screenshot of each screen for your final GUI >>
 
 ***        
@@ -40,7 +43,11 @@ school's campus itself.
         * ![class diagram](assets/class_diagram.jpg)
     * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
 * Classes
-    * << You should have a list of each of your classes with a description. >>
+    * Game class - draws the game with given assets
+    * Character class - contains info about the character
+    * Obstacle class - creates objects that the player interacts with
+    * Item class - creates objects that the character can use
+    * Settings class - allows user to control settings
 
 ***
 
