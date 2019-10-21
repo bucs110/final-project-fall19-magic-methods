@@ -1,21 +1,24 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
+# Runner Type Game
 ## CS 110 Final Project
-### << Semester, Year >>
+### Fall Semester, 2019
 ### [Assignment Description](https://drive.google.com/open?id=1HLIk-539N9KiAAG1224NWpFyEl4RsPVBwtBZ9KbjicE)
 
 << [https://github.com/<repo>](#) >>
 
 << [link to demo presentation slides](#) >>
 
-### Team: << team name >>
-#### << Team Members >>
+### Team: Magic Methods
+#### Ethan Huang, Anthony Tom, Jiahao Pan
 
 ***
 
 ## Project Description
-<< Give an overview of your project >>
+Our project is a runner type game based loosely on the mechanics of Kiloo's Subway Surfers and Halfbrick Studio's 
+Jetpack Joyride. The game centers around a nightmare in which the player is running to class, but never gets there.
+As the player runs to class, various obstacles and powerups (TBD) will appear. The game's design will be based on the
+school's campus itself.
 
 ***    
 
@@ -44,17 +47,20 @@
 ## Tasks and Responsibilities
 * You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
 
-### Software Lead - << name >>
+### Software Lead - Ethan Huang
 
-<< Worked as integration specialist by... >>
+The Software Lead will be overseeing the code written by both the Front End Specialist and the Back End Specialist
+and making sure that the team has a schedule for features that need to be implemented. He will also be responsible 
+for ensuring that the logic written by Back End Specialist is correct.
 
-### Front End Specialist - << name >>
+### Front End Specialist - Jiahao Pan
 
-<< Front-end lead conducted significant research on... >>
+The Front End Specialist will be writing the code that depicts the game's assets and designs on the screen. 
 
-### Back End Specialist - << name >>
+### Back End Specialist - Anthony
 
-<< The back end specialist... >>
+The Back End Specialist will be writing the necessary classes and drawing diagrams showing the relationships between
+each of the classes. He will also be responsible for writing the code that performs the game's mechanics.
 
 ## Testing
 * << Describe your testing strategy for your project. >>
