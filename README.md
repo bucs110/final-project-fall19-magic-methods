@@ -2,15 +2,15 @@
 
 # << Project Title >>
 ## CS 110 Final Project
-### << Semester, Year >>
+### Fall Semester, 2019
 ### [Assignment Description](https://drive.google.com/open?id=1HLIk-539N9KiAAG1224NWpFyEl4RsPVBwtBZ9KbjicE)
 
 << [https://github.com/<repo>](#) >>
 
 << [link to demo presentation slides](#) >>
 
-### Team: << team name >>
-#### << Team Members >>
+### Team: Magic Methods
+#### Ethan Huang, Jiahao Pan, Anthony Tom
 
 ***
 
