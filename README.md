@@ -9,7 +9,7 @@
 
 << [link to demo presentation slides](#) >>
 
-### Team: Magic Methods
+### Team: Magic Methods 
 #### Ethan Huang, Anthony Tom, Jiahao Pan
 
 ***
