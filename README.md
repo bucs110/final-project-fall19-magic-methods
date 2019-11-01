@@ -1,27 +1,31 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
+# Runner Type Game
 ## CS 110 Final Project
 ### Fall Semester, 2019
 ### [Assignment Description](https://drive.google.com/open?id=1HLIk-539N9KiAAG1224NWpFyEl4RsPVBwtBZ9KbjicE)
 
-<< [https://github.com/<repo>](#) >>
+<< [https://github.com/bucs110/final-project-fall19-magic-methods](#) >>
 
 << [link to demo presentation slides](#) >>
 
 ### Team: Magic Methods
 #### Ethan Huang, Jiahao Pan, Anthony Tom
 
-***
-
 ## Project Description
-<< Give an overview of your project >>
+Our project is a runner type game based loosely on the mechanics of Kiloo's Subway Surfers and Halfbrick Studio's
+Jetpack Joyride. The game centers around a nightmare in which the player is running to class, but never gets there.
+As the player runs to class, various obstacles and powerups (TBD) will appear. The game's design will be based on the
+school's campus itself.
 
 ***    
 
 ## User Interface Design
-* << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. >>
+* ![UI Sketch](assets/UI_Drawing.jpg)
     * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
+     *Start Screen - game title, character customization, and play button
+     *Game Screen - character and game setting
+     *End Screen - includes option to play again, end, and displays highscores
 * << You should also have a screenshot of each screen for your final GUI >>
 
 ***        
@@ -37,24 +41,31 @@
         * ![class diagram](assets/class_diagram.jpg)
     * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
 * Classes
-    * << You should have a list of each of your classes with a description. >>
+    * Game class - draws the game with given assets
+    * Character class - contains info about the character
+    * Obstacle class - creates objects that the player interacts with
+    * Item class - creates objects that the character can use
+    * Settings class - allows user to control settings
 
 ***
 
 ## Tasks and Responsibilities
 * You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
 
-### Software Lead - << name >>
+### Software Lead - Ethan Huang
 
-<< Worked as integration specialist by... >>
+The Software Lead will be overseeing the code written by both the Front End Specialist and the Back End Specialist
+and making sure that the team has a schedule for features that need to be implemented. He will also be responsible
+for ensuring that the logic written by Back End Specialist is correct.
 
-### Front End Specialist - << name >>
+### Front End Specialist - Jiahao Pan
 
-<< Front-end lead conducted significant research on... >>
+The Front End Specialist will be writing the code that depicts the game's assets and designs on the screen.
 
-### Back End Specialist - << name >>
+### Back End Specialist - Anthony
 
-<< The back end specialist... >>
+The Back End Specialist will be writing the necessary classes and drawing diagrams showing the relationships between
+each of the classes. He will also be responsible for writing the code that performs the game's mechanics.
 
 ## Testing
 * << Describe your testing strategy for your project. >>
