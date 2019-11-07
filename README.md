@@ -10,12 +10,10 @@
 << [link to demo presentation slides](#) >>
 
 ### Team: Magic Methods
-#### Ethan Huang, Anthony Tom, Jiahao Pan
-
-***
+#### Ethan Huang, Jiahao Pan, Anthony Tom
 
 ## Project Description
-Our project is a runner type game based loosely on the mechanics of Kiloo's Subway Surfers and Halfbrick Studio's 
+Our project is a runner type game based loosely on the mechanics of Kiloo's Subway Surfers and Halfbrick Studio's
 Jetpack Joyride. The game centers around a nightmare in which the player is running to class, but never gets there.
 As the player runs to class, various obstacles and powerups (TBD) will appear. The game's design will be based on the
 school's campus itself.
@@ -57,12 +55,12 @@ school's campus itself.
 ### Software Lead - Ethan Huang
 
 The Software Lead will be overseeing the code written by both the Front End Specialist and the Back End Specialist
-and making sure that the team has a schedule for features that need to be implemented. He will also be responsible 
+and making sure that the team has a schedule for features that need to be implemented. He will also be responsible
 for ensuring that the logic written by Back End Specialist is correct.
 
 ### Front End Specialist - Jiahao Pan
 
-The Front End Specialist will be writing the code that depicts the game's assets and designs on the screen. 
+The Front End Specialist will be writing the code that depicts the game's assets and designs on the screen.
 
 ### Back End Specialist - Anthony
 
