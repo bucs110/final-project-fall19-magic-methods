@@ -1,11 +1,11 @@
 #import your controller
-import pygame, pyganim, character, spriteSheet, gameScreen, random
-
+import controller
+import pygame
 
 def main():
     pygame.init()
 
-    game = Controller()
+    game = controller.Controller()
     game.mainLoop()
 
 if __name__ == "__main__":
