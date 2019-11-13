@@ -41,11 +41,11 @@ school's campus itself.
         * ![class diagram](assets/class_diagram.jpg)
     * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
 * Classes
-    * Game class - draws the game with given assets
-    * Character class - contains info about the character
-    * Obstacle class - creates objects that the player interacts with
-    * Item class - creates objects that the character can use
-    * Settings class - allows user to control settings
+    * Controller class - takes user input and updates the game
+    * Character class - includes varbiables and methods for the character used by the player
+    * Background class - includes variables and methods for the background to be drawn to the screen
+    * AnimatedSprite class - creates an animated sprite that can be used for animations with the pyganimation library
+    * Tile class - creates a tile from a section grabbed from a sprite sheet
 
 ***
 
