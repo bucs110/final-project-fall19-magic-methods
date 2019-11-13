@@ -35,7 +35,7 @@ school's campus itself.
     * [Pyganim](https://pyganim.readthedocs.io/en/latest/index.html)
         * Pyganim is a module that works in conjunction with Pygame to create animated images that can easily be played, paused, and stopped.
 * Class Interface Design
-    * ![class diagram](assets/Final Project.vpd.png)
+    * ![Class diagram](assets/Final Project.vpd.png)
 * Classes
     * Controller class - takes user input and updates the game
     * Character class - includes varbiables and methods for the character used by the player
