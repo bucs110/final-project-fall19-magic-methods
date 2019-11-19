@@ -1,5 +1,5 @@
 import pygame
-import animatedSprite
+from src import animatedSprite
 
 # for an animated sprite
 # (img_file, x, y,
@@ -51,4 +51,3 @@ class Character(pygame.sprite.Sprite):
         if self.state != "JUMP":
             self.setState("JUMP")
             pygame.time.set_timer(event, 900)
-            print("started jump")
