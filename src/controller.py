@@ -2,6 +2,7 @@ import sys
 import pygame
 from src import character
 from src import background
+from src import tile
 
 class Controller:
     def __init__(self):
