@@ -64,13 +64,17 @@ The Back End Specialist will be writing the necessary classes and drawing diagra
 each of the classes. He will also be responsible for writing the code that performs the game's mechanics.
 
 ## Testing
-* << Describe your testing strategy for your project. >>
-    * << Example >>
-
-* Your ATP
+* Testing for our program will be sequential. After clicking through the start screen, the user should immediately enter the game screen. By using the up and down keys, the user will be able to change lanes in the game. When colliding with an item, the user should either take damage or gain an ability. After losing all of his or her health, the user should be taken to an end screen that includes the options to play again or return to the start screen.
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
 | ----------------------|:-------------:| -----------------:| -------------- |
-|  1  | Run Counter Program  | GUI window appears with count = 0  |          |
-|  2  | click count button  | display changes to count = 1 |                 |
-etc...
+|  1  | Click the "play" button  | Screen switches from start to game  |          |
+|  2  | Press the up or down keys  | The player changes lanes in the screen |                 |
+|  3  | Collide with an obstacle  |  The player's health should decrease by 1  |               |
+|  4  |  Press the spacebar key before colliding with a floor obstacle  |  Player should not take damage  |               |
+|  5  |  Collide with an item  |  When colliding with obstacle does not take damage  |                  |
+|  6  |  Lose all health  |  Screen switches from game to end  |               |
+|  7  | Enter name  |  Score is added to high scores  |                |
+|  8  | Click the "play again" button  |  Screen switches from end to game with variables reset  |               |
+|  9  |  Repeat steps and click the "Home" button  |  Screen switches from end to start |                 |
+|  10  |  Click the exit button  |  Game quits itself  |                    |
