@@ -27,10 +27,10 @@ class Controller:
             "start": button.Button(self.windowSurface, "assets/play_button.png", 270, 200)
         }
 
-        self.startScreen = startScreen.StartScreen(self.windowSurface, "assets/start_temp.png")
+        self.startScreen = screen.Screen(self.windowSurface, "assets/start_temp.png")
         self.gameScreen = gameScreen.GameScreen(self.windowSurface, self.player)
         self.gameScreen.setSpeed(2)
-        self.endScreen = endScreen.EndScreen(self.windowSurface, "assets/end_temp.jpg")
+        self.endScreen = screen.Screen(self.windowSurface, "assets/end_temp.jpg")
 
         self.SOUNDS = {
             "THEME0":pygame.mixer.Sound("assets/sounds/LoopFrogger.wav"),
