@@ -14,28 +14,36 @@ class Character(pygame.sprite.Sprite):
         self.lives = 3
         self.jumping = False
         anims = [
-            animatedSprite.AnimatedSprite("assets/temp_sprite.png",0,64,
-                            64,64,6,200),
             animatedSprite.AnimatedSprite("assets/temp_sprite.png",0,128,
-                            64,64,3,300)
+                            64,64,6,200),
+            animatedSprite.AnimatedSprite("assets/temp_sprite.png",0,192,
+                            64,64,3,300),
+            animatedSprite.AnimatedSprite("assets/temp_sprite.png",312,192,
+                            64,64,1,200)
         ]
         anims = [
             anim.getAnimatedSprite() for anim in anims
         ]
         self.animObjs = {
             "RUN":anims[0],
-            "JUMP":anims[1]
+            "JUMP":anims[1],
+            "HURT":anims[2]
         }
         self.setState("RUN")
 
     def setState(self,state):
+        if state == "RUN":
+            self.jumping = False
         self.state = state
         self.animObjs[self.state].play()
 
-    def takeDamage(self):
-        self.lives -= 1
-        return self.lives < 1
+    def getHealth(self):
+        return self.lives
 
+    def takeDamage(self):
+        self.setState("HURT")
+        pygame.time.set_timer(pygame.USEREVENT + 2,400)
+        self.lives -= 1
 
     def move(self,dir):
         if dir == "UP":
@@ -47,7 +55,7 @@ class Character(pygame.sprite.Sprite):
 
         self.rect.y = 256 + (self.row - 2) * 42
 
-    def jump(self, event):
+    def jump(self):
         if self.state != "JUMP":
             self.setState("JUMP")
-            pygame.time.set_timer(event, 900)
+            pygame.time.set_timer(pygame.USEREVENT + 1, 900)

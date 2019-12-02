@@ -1,16 +1,15 @@
 import pygame, random
-from src import tile
+from src import spriteSheet
 from src import item
 
 class Background:
-    def __init__(self, surface):
+    def __init__(self):
         self.board = []
         self.tiles = pygame.sprite.Group()
-        self.surface = surface
         for y in range(4):
             row = []
             for x in range(8):
-                t = tile.Tile("assets/temp_sprite.png",64 * y, 0, 64, 64)
+                t = spriteSheet.SpriteSheet("assets/temp_sprite.png",64 * y, 0, 64, 64)
                 t.move(64 * x, y * 64)
                 row.append(t)
                 self.tiles.add(t)
