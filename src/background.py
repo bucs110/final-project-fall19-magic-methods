@@ -1,5 +1,6 @@
-import pygame
+import pygame, random
 from src import tile
+from src import item
 
 class Background:
     def __init__(self, surface):
@@ -38,3 +39,7 @@ class Background:
                 n_tile.move(64 * 8, row[0].rect.y)
                 row.append(n_tile)
                 self.tiles.add(n_tile)
+
+            # if random.choice(True,False):
+            #     n_item = item.Item("assets/temp_sprite.png",128, 192, 64, 64)
+            #     n_item.move(100,100)

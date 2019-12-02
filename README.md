@@ -32,20 +32,16 @@ school's campus itself.
 
 ## Program Design
 * Non-Standard libraries
-    * << You should have a list of any additional libraries or modules used (pygame, request) beyond non-standard python. >>
-    * For each additional module you should include
-        * url for the module documentation
-        * a short description of the module
+    * [Pyganim](https://pyganim.readthedocs.io/en/latest/index.html)
+        * Pyganim is a module that works in conjunction with Pygame to create animated images that can easily be played, paused, and stopped.
 * Class Interface Design
-    * << A simple drawing that shows the class relationships in your code (see below for an example). >>
-        * ![class diagram](assets/class_diagram.jpg)
-    * This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm.
+    * ![Class diagram](assets/Final Project.vpd.png)
 * Classes
-    * Game class - draws the game with given assets
-    * Character class - contains info about the character
-    * Obstacle class - creates objects that the player interacts with
-    * Item class - creates objects that the character can use
-    * Settings class - allows user to control settings
+    * Controller class - takes user input and updates the game
+    * Character class - includes varbiables and methods for the character used by the player
+    * Background class - includes variables and methods for the background to be drawn to the screen
+    * AnimatedSprite class - creates an animated sprite that can be used for animations with the pyganimation library
+    * Tile class - creates a tile from a section grabbed from a sprite sheet
 
 ***
 
