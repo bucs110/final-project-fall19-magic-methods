@@ -1,11 +1,12 @@
 #import your controller
-import pygame, pyganim, character, spriteSheet, gameScreen, random
-
+from src import controller
+import pygame
 
 def main():
+    pygame.mixer.pre_init(frequency=48000)
     pygame.init()
 
-    game = Controller()
+    game = controller.Controller()
     game.mainLoop()
 
 if __name__ == "__main__":
