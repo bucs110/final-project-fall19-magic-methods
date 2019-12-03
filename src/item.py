@@ -2,7 +2,7 @@ import pygame, random
 from src import tile
 
 class Item(tile.Tile):
-    def __init__(self,img_file, x, y, width, height):
-        tile.Tile.__init__(img_file, x, y, width, height)
+    def __init__(self,image, x, y):
+        tile.Tile.__init__(self, image, x, y)
         self.row = random.randint(1,3)
-        self.move(516, 256 + (self.row - 2) * 42)
+        self.setpos(516, 266 + (self.row - 2) * 42)

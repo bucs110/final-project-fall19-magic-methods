@@ -3,6 +3,7 @@ from src import controller
 import pygame
 
 def main():
+    pygame.mixer.pre_init(frequency=48000)
     pygame.init()
 
     game = controller.Controller()

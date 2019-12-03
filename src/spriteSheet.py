@@ -1,25 +1,25 @@
 import pygame
 
 class SpriteSheet:
-    def __init__(self,img_file):
-        self.sprite_sheet = pygame.image.load(img_file).convert_alpha()
+    def __init__(self):
         self.KEY = {
-            "sky0":self.getSprite(256, 0, 64, 64),
-            "sky1":self.getSprite(192, 0, 64, 64),
-            "sky2":self.getSprite(128, 0, 64, 64),
-            "sky3":self.getSprite(64, 0, 64, 64),
-            "sky4":self.getSprite(0, 0, 64, 64),
-            "ground":self.getSprite(320, 0, 64, 64),
-            "cloud0":self.getSprite(0, 64, 128, 64),
-            "cloud1":self.getSprite(128, 64, 64, 64),
-            "whiskey":self.getSprite(192, 64, 64, 64)
+            "SKY0":pygame.image.load("assets/imgs/sky0.png").convert_alpha(),
+            "SKY1":pygame.image.load("assets/imgs/sky1.png").convert_alpha(),
+            "SKY2":pygame.image.load("assets/imgs/sky2.png").convert_alpha(),
+            "SKY3":pygame.image.load("assets/imgs/sky3.png").convert_alpha(),
+            "SKY4":pygame.image.load("assets/imgs/sky4.png").convert_alpha(),
+            "CLOUD0":pygame.image.load("assets/imgs/cloud0.png").convert_alpha(),
+            "CLOUD1":pygame.image.load("assets/imgs/cloud1.png").convert_alpha(),
+            "BRICK":pygame.image.load("assets/imgs/brick.png").convert_alpha(),
+            "CONCRETE":pygame.image.load("assets/imgs/concrete.png").convert_alpha(),
+            "WHISKEY":pygame.image.load("assets/imgs/whiskey.png").convert_alpha(),
+            "GOBLIN":pygame.image.load("assets/imgs/goblin.png").convert_alpha(),
+            "HEART":pygame.image.load("assets/imgs/heart.png").convert_alpha(),
+            "BUILDING0":pygame.image.load("assets/imgs/building0.png").convert_alpha(),
+            "BUILDING1":pygame.image.load("assets/imgs/building1.png").convert_alpha(),
+            "BUILDING2":pygame.image.load("assets/imgs/building2.png").convert_alpha(),
+            "BUILDING3":pygame.image.load("assets/imgs/building3.png").convert_alpha(),
         }
-
-    def getSprite(self,x,y,width,height):
-        sprite = pygame.Surface((width,height))
-        sprite.set_colorkey((100,100,100))
-        sprite.blit(self.sprite_sheet,(0,0),(x,y,width,height))
-        return sprite
 
     def getKEY(self):
         return self.KEY

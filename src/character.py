@@ -1,24 +1,17 @@
 import pygame
 from src import animatedSprite
 
-# for an animated sprite
-# (img_file, x, y,
-# width, height, n_frames, frame_length)
 class Character(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface((64,64))
         self.rect = self.image.get_rect()
-        self.row = 2
-        self.rect.x, self.rect.y = 40, 256 + (self.row - 2) * 42
-        self.lives = 3
-        self.jumping = False
         anims = [
-            animatedSprite.AnimatedSprite("assets/temp_sprite.png",0,128,
+            animatedSprite.AnimatedSprite("assets/imgs/sam_sprites.png",0,0,
                             64,64,6,200),
-            animatedSprite.AnimatedSprite("assets/temp_sprite.png",0,192,
+            animatedSprite.AnimatedSprite("assets/imgs/sam_sprites.png",0,64,
                             64,64,3,300),
-            animatedSprite.AnimatedSprite("assets/temp_sprite.png",312,192,
+            animatedSprite.AnimatedSprite("assets/imgs/sam_sprites.png",312,64,
                             64,64,1,200)
         ]
         anims = [
@@ -29,6 +22,13 @@ class Character(pygame.sprite.Sprite):
             "JUMP":anims[1],
             "HURT":anims[2]
         }
+        self.reset()
+
+    def reset(self):
+        self.row = 2
+        self.rect.x, self.rect.y = 40, 256 + (self.row - 2) * 42
+        self.lives = 3
+        self.jumping = False
         self.setState("RUN")
 
     def setState(self,state):
