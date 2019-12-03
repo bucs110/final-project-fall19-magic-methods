@@ -1,6 +1,4 @@
-:warning: Everything between << >> needs to be replaced (remove << >> after replacing)
-
-# Runner Type Game
+# 110 Go!
 ## CS 110 Final Project
 ### Fall Semester, 2019
 ### [Assignment Description](https://drive.google.com/open?id=1HLIk-539N9KiAAG1224NWpFyEl4RsPVBwtBZ9KbjicE)
@@ -23,9 +21,9 @@ school's campus itself.
 ## User Interface Design
 * ![UI Sketch](/assets/UI_Drawing.jpg)
     * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
-     *Start Screen - game title, character customization, and play button
+     *Start Screen - game title and play button
      *Game Screen - character and game setting
-     *End Screen - includes option to play again, end, and displays highscores
+     *End Screen - displays score and includes option to play again or end
 * << You should also have a screenshot of each screen for your final GUI >>
 
 ***        
@@ -64,17 +62,14 @@ The Back End Specialist will be writing the necessary classes and drawing diagra
 each of the classes. He will also be responsible for writing the code that performs the game's mechanics.
 
 ## Testing
-* Testing for our program will be sequential. After clicking through the start screen, the user should immediately enter the game screen. By using the up and down keys, the user will be able to change lanes in the game. When colliding with an item, the user should either take damage or gain an ability. After losing all of his or her health, the user should be taken to an end screen that includes the options to play again or return to the start screen.
+* Testing for our program will be sequential. After clicking through the start screen, the user should immediately enter the game screen. By using the up and down keys, the user will be able to change lanes in the game. When colliding with a goblin, the user should take damage. After losing all of his or her health, the user should be taken to an end screen that includes the options to play again or return to the start screen.
 
 | Step                  | Procedure     | Expected Results  | Actual Results |
 | ----------------------|:-------------:| -----------------:| -------------- |
 |  1  | Click the "play" button  | Screen switches from start to game  |          |
-|  2  | Press the up or down keys  | The player changes lanes in the screen |                 |
+|  2  | Press the w or s keys  | The player changes lanes in the screen |                 |
 |  3  | Collide with an obstacle  |  The player's health should decrease by 1  |               |
-|  4  |  Press the spacebar key before colliding with a floor obstacle  |  Player should not take damage  |               |
-|  5  |  Collide with an item  |  When colliding with obstacle does not take damage  |                  |
-|  6  |  Lose all health  |  Screen switches from game to end  |               |
-|  7  | Enter name  |  Score is added to high scores  |                |
-|  8  | Click the "play again" button  |  Screen switches from end to game with variables reset  |               |
-|  9  |  Repeat steps and click the "Home" button  |  Screen switches from end to start |                 |
-|  10  |  Click the exit button  |  Game quits itself  |                    |
+|  4  | Lose all health  |  Screen switches from game to end  |               |
+|  5  | Click the "play" button  |  Screen switches from end to game with variables reset  |               |
+|  6  |  Repeat steps and click the "exit" button  |  Screen switches from end to start |                 |
+|  7  |  Click the "x" button  |  Game quits itself  |                    |
