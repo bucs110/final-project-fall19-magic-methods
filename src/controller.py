@@ -7,6 +7,18 @@ from src import character
 
 class Controller:
     def __init__(self):
+        """
+        Initializes an instance of the Controller class
+
+        Allows the user to interact with on screen elements
+
+        Args:
+            self (Controller): an instance of the controller class
+
+        Returns:
+            None: None
+        """
+
         self.large_font = pygame.font.SysFont("Arial", 24)
         self.small_font = pygame.font.SysFont("Arial", 16)
         self.windowSurface = pygame.display.set_mode((512,384))
@@ -20,7 +32,7 @@ class Controller:
         self.DAMAGEEVENT = pygame.USEREVENT + 2
         self.player = character.Character()
 
-        self.buttons = {
+        self.BUTTONS = {
             "START0": button.Button(self.windowSurface, "assets/imgs/play_button.png", 270, 200),
             "START1": button.Button(self.windowSurface, "assets/imgs/play_button.png", 250, 70),
             "EXIT": button.Button(self.windowSurface, "assets/imgs/exit_temp.png", 280, 180)
@@ -41,6 +53,15 @@ class Controller:
         self.SOUNDS["OUCH"].set_volume(0.3)
 
     def mainLoop(self):
+        """
+        Determines which screen the user is in
+
+        Args:
+            self (Controller): An instance of the Controller class
+
+        Returns:
+            None: None
+        """
         running = True
         while running:
             if self.state == "START":
@@ -51,6 +72,15 @@ class Controller:
                 self.endLoop()
 
     def gameLoop(self):
+        """
+        Draws and updates the game screen
+
+        Args:
+            self (Controller): an instance of the Controller class
+
+        Returns:
+            None: None
+        """
         self.SOUNDS["THEME0"].play(-1)
         while self.state == "GAME":
             # if pygame.event.get(self.JUMPEVENT):
@@ -96,15 +126,24 @@ class Controller:
             self.clock.tick(30)
 
     def startLoop(self):
+        """
+        Draws and updates the start screen
+
+        Args:
+            self (Controller): an instance of the Controller class
+
+        Returns:
+            None: None
+        """
         while self.state == "START":
             self.windowSurface.blit(self.startScreen.getBg(), (0,0))
-            self.buttons["START0"].draw()
+            self.BUTTONS["START0"].draw()
             pygame.display.flip()
 
             for event in pygame.event.get():
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if event.button == 1:
-                        if self.buttons["START0"].isHover(pygame.mouse.get_pos()):
+                        if self.BUTTONS["START0"].isHover(pygame.mouse.get_pos()):
                             self.state = "GAME"
                             self.gameScreen.reset()
                             self.SOUNDS["CLICK"].play()
@@ -113,24 +152,33 @@ class Controller:
                     sys.exit()
 
     def endLoop(self):
+        """
+        Draws and updates the end screen
+
+        Args:
+            self (Controller): an instance of the Controller class
+
+        Returns:
+            None: None
+        """
         self.SOUNDS["THEME0"].fadeout(1000)
         score_message = self.large_font.render(f"YOU SCORED {str(self.gameScreen.getScore())}", False, (255,255,255))
 
         while self.state == "END":
             self.windowSurface.blit(self.endScreen.getBg(), (0,0))
-            self.buttons["START1"].draw()
-            self.buttons["EXIT"].draw()
+            self.BUTTONS["START1"].draw()
+            self.BUTTONS["EXIT"].draw()
             self.windowSurface.blit(score_message, (50, 160))
             pygame.display.flip()
 
             for event in pygame.event.get():
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if event.button == 1:
-                        if self.buttons["EXIT"].isHover(pygame.mouse.get_pos()):
+                        if self.BUTTONS["EXIT"].isHover(pygame.mouse.get_pos()):
                             self.state = "START"
                             self.SOUNDS["CLICK"].play()
                             pygame.time.wait(600)
-                        elif self.buttons["START1"].isHover(pygame.mouse.get_pos()):
+                        elif self.BUTTONS["START1"].isHover(pygame.mouse.get_pos()):
                             self.state = "GAME"
                             self.gameScreen.reset()
                             self.SOUNDS["CLICK"].play()
