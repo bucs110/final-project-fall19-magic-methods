@@ -21,11 +21,11 @@ school's campus itself.
 ## User Interface Design
 * ![UI Sketch](/assets/UI_Drawing.jpg)
     * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
-* ![Start screen](/assets/UI_0.png)
+* ![Start screen](/assets/UI_0.PNG)
      *Start Screen - game title and play button
-* ![Game screen](/assets/UI_1.png)
+* ![Game screen](/assets/UI_1.PNG)
      *Game Screen - character and game setting
-* ![End screen](/assets/UI_2.png)
+* ![End screen](/assets/UI_2.PNG)
      *End Screen - displays score and includes option to play again or end
      
 ***        
@@ -35,7 +35,7 @@ school's campus itself.
     * [Pyganim](https://pyganim.readthedocs.io/en/latest/index.html)
         * Pyganim is a module that works in conjunction with Pygame to create animated images that can easily be played, paused, and stopped.
 * Class Interface Design
-    * ![Class diagram](/assets/FINAL CLASS DIAGRAM.png)
+    * ![Class diagram](/assets/FINAL_CLASS_DIAGRAM.png)
 * Classes
     * Controller class - takes user input and updates the game
     * Character class - creates the character the user interacts with
