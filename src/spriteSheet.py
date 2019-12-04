@@ -2,6 +2,11 @@ import pygame
 
 class SpriteSheet:
     def __init__(self):
+        """
+        Initializes the self.KEY sprite group as an instance variable.
+        args: none
+        returns: none
+        """
         self.KEY = {
             "SKY0":pygame.image.load("assets/imgs/sky0.png").convert_alpha(),
             "SKY1":pygame.image.load("assets/imgs/sky1.png").convert_alpha(),
@@ -22,4 +27,9 @@ class SpriteSheet:
         }
 
     def getKEY(self):
+        """
+        Gets the self.key sprite group.
+        args: none
+        returns: (pygame.sprite.Group) key sprite group
+        """
         return self.KEY
