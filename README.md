@@ -56,7 +56,7 @@ for ensuring that the logic written by Back End Specialist is correct.
 
 The Front End Specialist will be writing the code that depicts the game's assets and designs on the screen.
 
-### Back End Specialist - Anthony
+### Back End Specialist - Anthony Tom
 
 The Back End Specialist will be writing the necessary classes and drawing diagrams showing the relationships between
 each of the classes. He will also be responsible for writing the code that performs the game's mechanics.

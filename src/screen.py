@@ -4,7 +4,7 @@ class Screen:
     def __init__(self, display, image=None):
         """
         Loads the background image if there is one.
-        args: display and (string) image name
+        args: (Screen object) a reference to the object itself (pygame.Surface) display (string) image name
         returns: none
         """
         if not image == None:
@@ -14,7 +14,7 @@ class Screen:
     def getBg(self):
         """
         Gets the background of the screen.
-        args: none
+        args: (Screen object) a reference to the object itself
         returns: (pygame.sprite.Group) background sprite group
         """
         return self.bg

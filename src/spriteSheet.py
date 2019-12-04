@@ -3,8 +3,8 @@ import pygame
 class SpriteSheet:
     def __init__(self):
         """
-        Initializes the self.KEY sprite group as an instance variable.
-        args: none
+        Initializes a dictionary containing sprite surfaces as an instance variable.
+        args: (SpriteSheet object) a reference to the object itself
         returns: none
         """
         self.KEY = {
@@ -29,7 +29,7 @@ class SpriteSheet:
     def getKEY(self):
         """
         Gets the self.key sprite group.
-        args: none
+        args: (SpriteSheet object) a reference to the object itself
         returns: (pygame.sprite.Group) key sprite group
         """
         return self.KEY
