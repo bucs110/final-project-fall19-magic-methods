@@ -5,11 +5,12 @@ from src import screen
 from src import gameScreen
 from src import character
 
+
 class Controller:
     def __init__(self):
         self.large_font = pygame.font.SysFont("Arial", 24)
         self.small_font = pygame.font.SysFont("Arial", 16)
-        self.windowSurface = pygame.display.set_mode((512,384))
+        self.windowSurface = pygame.display.set_mode((512, 384))
         icon = pygame.image.load("assets/imgs/icon.png").convert_alpha()
         pygame.display.set_icon(icon)
         pygame.display.set_caption("110 Go!")
@@ -32,10 +33,10 @@ class Controller:
         self.endScreen = screen.Screen(self.windowSurface, "assets/imgs/end_screen.png")
 
         self.SOUNDS = {
-            "THEME0":pygame.mixer.Sound("assets/sounds/whiskeymusic.wav"),
+            "THEME0": pygame.mixer.Sound("assets/sounds/whiskeymusic.wav"),
             # "JUMP":pygame.mixer.Sound("assets/sounds/jump.wav"),
-            "CLICK":pygame.mixer.Sound("assets/sounds/click.wav"),
-            "OUCH":pygame.mixer.Sound("assets/sounds/ouch.wav")
+            "CLICK": pygame.mixer.Sound("assets/sounds/click.wav"),
+            "OUCH": pygame.mixer.Sound("assets/sounds/ouch.wav")
         }
         self.SOUNDS["THEME0"].set_volume(0.2)
         self.SOUNDS["OUCH"].set_volume(0.3)
@@ -83,13 +84,14 @@ class Controller:
             if self.player.getHealth() == 0:
                 self.state = "END"
 
-            score_message = self.small_font.render(f"Score: {str(self.gameScreen.getScore())}", False, (255,255,255))
+            score_message = self.small_font.render(
+                f"Score: {str(self.gameScreen.getScore())}", False, (255, 255, 255))
             self.gameScreen.update()
             self.gameScreen.getBg().draw(self.windowSurface)
             self.player.animObjs[self.player.state].blit(self.windowSurface, self.player.rect)
             for i in range(self.player.lives):
                 heart = pygame.image.load("assets/imgs/heart.png").convert_alpha()
-                self.windowSurface.blit(heart, (10 + (40 * i),10))
+                self.windowSurface.blit(heart, (10 + (40 * i), 10))
             self.windowSurface.blit(score_message, (10, 40))
             pygame.display.update()
 
@@ -97,7 +99,7 @@ class Controller:
 
     def startLoop(self):
         while self.state == "START":
-            self.windowSurface.blit(self.startScreen.getBg(), (0,0))
+            self.windowSurface.blit(self.startScreen.getBg(), (0, 0))
             self.buttons["START0"].draw()
             pygame.display.flip()
 
@@ -112,14 +114,31 @@ class Controller:
                 elif event.type == pygame.QUIT:
                     sys.exit()
 
+    def updateScore(self):
+        with open("src/scores.txt") as f:
+            file = f.readlines()
+            last = int(file[0])
+            if last == "":
+                last = 0
+            if last < self.gameScreen.getScore():
+                f.close()
+                file = open('src/scores.txt', 'w+')
+                file.write(str(self.gameScreen.getScore()))
+                file.close()
+                return self.gameScreen.getScore()
+            return last
+
     def endLoop(self):
         self.SOUNDS["THEME0"].fadeout(1000)
-        score_message = self.large_font.render(f"YOU SCORED {str(self.gameScreen.getScore())}", False, (255,255,255))
-
+        score_message = self.small_font.render(
+            f"Current {str(self.gameScreen.getScore())}", False, (255, 255, 255))
+        high_score = self.large_font.render(
+            f"Highscore {self.updateScore()}", False, (255, 255, 255))
         while self.state == "END":
-            self.windowSurface.blit(self.endScreen.getBg(), (0,0))
+            self.windowSurface.blit(self.endScreen.getBg(), (0, 0))
             self.buttons["START1"].draw()
             self.buttons["EXIT"].draw()
+            self.windowSurface.blit(high_score, (50, 130))
             self.windowSurface.blit(score_message, (50, 160))
             pygame.display.flip()
 
