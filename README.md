@@ -13,7 +13,7 @@
 ## Project Description
 Our project is a runner type game based loosely on the mechanics of Kiloo's Subway Surfers and Halfbrick Studio's
 Jetpack Joyride. The game centers around a nightmare in which the player is running to class, but never gets there.
-As the player runs to class, various obstacles and powerups (TBD) will appear. The game's design will be based on the
+As the player runs to class, the player will have to avoid dream goblins. The game's design will be based on the
 school's campus itself.
 
 ***    
@@ -33,13 +33,17 @@ school's campus itself.
     * [Pyganim](https://pyganim.readthedocs.io/en/latest/index.html)
         * Pyganim is a module that works in conjunction with Pygame to create animated images that can easily be played, paused, and stopped.
 * Class Interface Design
-    * ![Class diagram](/assets/Temp_Class_Diagram.png)
+    * ![Class diagram](/assets/FINAL_CLASS_DIAGRAM.png)
 * Classes
     * Controller class - takes user input and updates the game
-    * Character class - includes varbiables and methods for the character used by the player
-    * Background class - includes variables and methods for the background to be drawn to the screen
-    * AnimatedSprite class - creates an animated sprite that can be used for animations with the pyganimation library
-    * Tile class - creates a tile from a section grabbed from a sprite sheet
+    * Character class - creates the character the user interacts with
+    * Button class - creates on screen widgets
+    * GameScreen class - draws and updates the game screen
+    * Screen class - draws and updates a generic screen
+    * Item class - creates an obstacle that the player interacts with
+    * Tile class - creates sprites that compose the game screen
+    * SpriteSheet - creates a set of pygame surfaces to be used with the Tile class
+    * AnimatedSprite class - creates an animated sprite object using the pyganim module
 
 ***
 
@@ -56,7 +60,7 @@ for ensuring that the logic written by Back End Specialist is correct.
 
 The Front End Specialist will be writing the code that depicts the game's assets and designs on the screen.
 
-### Back End Specialist - Anthony Tom
+### Back End Specialist - Anthony
 
 The Back End Specialist will be writing the necessary classes and drawing diagrams showing the relationships between
 each of the classes. He will also be responsible for writing the code that performs the game's mechanics.
