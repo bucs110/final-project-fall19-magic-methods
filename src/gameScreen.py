@@ -7,12 +7,22 @@ from src import item
 
 class GameScreen(screen.Screen):
     def __init__(self, display, player):
+        """
+        Sets up the display and loads all of the sprites.
+        args: display and player
+        returns: none
+        """
         screen.Screen.__init__(self, display)
         self.sprite_sheet = spriteSheet.SpriteSheet().getKEY()
         self.player = player
         self.reset()
 
     def reset(self):
+        """
+        Resets the game to its original state. Score is set to zero and speed is set to the starting value.
+        args: none
+        returns: none
+        """
         self.player.reset()
         self.speed = 4
         self.score = 0
@@ -38,12 +48,27 @@ class GameScreen(screen.Screen):
                 self.ground.add(t)
 
     def setSpeed(self, speed):
+        """
+        Sets the speed of the game.
+        args: (int) speed
+        returns: none
+        """
         self.speed = speed
 
     def getScore(self):
+        """
+        Gets the score of the game.
+        args: none
+        returns: (int) score
+        """
         return self.score
 
     def update(self):
+        """
+        Updates the game screen.
+        args: none
+        returns: none
+        """
         self.score += 10
         self.bg = pygame.sprite.Group(tuple(self.sky,) + tuple(self.clouds) + tuple(self.buildings) + tuple(self.ground,) + tuple(self.items,))
 
@@ -94,4 +119,9 @@ class GameScreen(screen.Screen):
                     self.player.takeDamage()
 
     def getBg(self):
+        """
+        Gets the background sprite group.
+        args: none
+        returns: (pygame.sprite.Group) background sprite group
+        """
         return self.bg

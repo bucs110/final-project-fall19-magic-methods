@@ -116,7 +116,7 @@ class Controller:
 
     def updateScore(self):
         """
-        Determines whether the player sets a new highscore
+        Determines whether the player sets highscore
         args: self (Controller Object) a reference to the object itself
         return: (int) highscore or current score
         """
