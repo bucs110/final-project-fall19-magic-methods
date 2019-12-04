@@ -9,7 +9,7 @@ class GameScreen(screen.Screen):
     def __init__(self, display, player):
         """
         Sets up the display and loads all of the sprites.
-        args: display and player
+        args: (GameScreen object) a reference to the object itself (pygame.Surface) display (Character object) player
         returns: none
         """
         screen.Screen.__init__(self, display)
@@ -20,7 +20,7 @@ class GameScreen(screen.Screen):
     def reset(self):
         """
         Resets the game to its original state. Score is set to zero and speed is set to the starting value.
-        args: none
+        args: (GameScreen object) a reference to the object itself
         returns: none
         """
         self.player.reset()
@@ -50,7 +50,7 @@ class GameScreen(screen.Screen):
     def setSpeed(self, speed):
         """
         Sets the speed of the game.
-        args: (int) speed
+        args: (GameScreen object) a reference to the object itself (int) speed
         returns: none
         """
         self.speed = speed
@@ -58,7 +58,7 @@ class GameScreen(screen.Screen):
     def getScore(self):
         """
         Gets the score of the game.
-        args: none
+        args: (GameScreen object) a reference to the object itself
         returns: (int) score
         """
         return self.score
@@ -66,7 +66,7 @@ class GameScreen(screen.Screen):
     def update(self):
         """
         Updates the game screen.
-        args: none
+        args: (GameScreen object) a reference to the object itself
         returns: none
         """
         self.score += 10
@@ -121,7 +121,7 @@ class GameScreen(screen.Screen):
     def getBg(self):
         """
         Gets the background sprite group.
-        args: none
+        args: (GameScreen object) a reference to the object itself
         returns: (pygame.sprite.Group) background sprite group
         """
         return self.bg

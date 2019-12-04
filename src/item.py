@@ -5,7 +5,7 @@ class Item(tile.Tile):
     def __init__(self,image, x, y):
         """
         Generates tiles with an image and x and y position.
-        args: (string) image name (int) x and y coordinates
+        args: (Item object) a reference to the object itself (string) image name (int) x and y coordinates
         returns: none
         """
         tile.Tile.__init__(self, image, x, y)
