@@ -115,6 +115,11 @@ class Controller:
                     sys.exit()
 
     def updateScore(self):
+        """
+        Determines whether the player sets a new highscore
+        args: self (Controller Object) a reference to the object itself
+        return: (int) highscore or current score
+        """
         with open("src/scores.txt") as f:
             file = f.readlines()
             last = int(file[0])
