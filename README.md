@@ -21,11 +21,11 @@ school's campus itself.
 ## User Interface Design
 * ![UI Sketch](/assets/UI_Drawing.jpg)
     * For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components
-* ![Start screen](/assets/UI_0.png]
+* ![Start screen](/assets/UI_0.png)
      *Start Screen - game title and play button
-* ![Game screen](/assets/UI_1.png]
+* ![Game screen](/assets/UI_1.png)
      *Game Screen - character and game setting
-* ![End screen](/assets/UI_2.png]
+* ![End screen](/assets/UI_2.png)
      *End Screen - displays score and includes option to play again or end
      
 ***        
