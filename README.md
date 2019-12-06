@@ -5,7 +5,7 @@
 
 << [https://github.com/bucs110/final-project-fall19-magic-methods](#) >>
 
-<< [link to demo presentation slides](#) >>
+<< [https://docs.google.com/presentation/d/1lJas8Qt14RLQ6mD5jBal7WI_Unv45b8vU8QW29oAP3o/edit?usp=sharing](#) >>
 
 ### Team: Magic Methods
 #### Ethan Huang, Jiahao Pan, Anthony Tom
@@ -50,7 +50,6 @@ school's campus itself.
 ***
 
 ## Tasks and Responsibilities
-* You must outline the team member roles and who was responsible for each class/method, both individual and collaborative.
 
 ### Software Lead - Ethan Huang
 
@@ -58,15 +57,41 @@ The Software Lead will be overseeing the code written by both the Front End Spec
 and making sure that the team has a schedule for features that need to be implemented. He will also be responsible
 for ensuring that the logic written by Back End Specialist is correct.
 
+Classes
+   *Controller
+   *GameScreen
+   *Screen
+   *Button
+   *Tile
+   *Item
+   *SpriteSheet
+   *Character
+   *AnimatedSprite
+
 ### Front End Specialist - Jiahao Pan
 
 The Front End Specialist will be writing the code that depicts the game's assets and designs on the screen.
+
+Classes
+   *Controller
+   *GameScreen
+   *Screen
+   *Button
+   *SpriteSheet
+   *AnimatedSprite
+   *Tile
+   *Item
 
 ### Back End Specialist - Anthony
 
 The Back End Specialist will be writing the necessary classes and drawing diagrams showing the relationships between
 each of the classes. He will also be responsible for writing the code that performs the game's mechanics.
 
+Classes
+   *Controller
+   *GameScreen
+   *Character
+   
 ## Testing
 * Testing for our program will be sequential. After clicking through the start screen, the user should immediately enter the game screen. By using the up and down keys, the user will be able to change lanes in the game. When colliding with a goblin, the user should take damage. After losing all of his or her health, the user should be taken to an end screen that includes the options to play again or return to the start screen.
 
